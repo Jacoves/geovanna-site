@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.desktop-links a {
+    @apply border-2 border-white flex-1 px-4 py-8 text-center hover:bg-blue-600 transition-all duration-300;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-carta {
+  position: relative;
+}
+.selo {
+  background-image: url(../src/assets/img/selo.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  bottom: 30px;
+  right: 10px;
+  height: 80px;
+  width: 190px;
+  z-index: 15;
+}
+
+  .fade-up {
+    @apply opacity-0;
+    transform: translate(0px, 4rem);
+  }
+  .fade-down {
+    @apply opacity-0;
+    transform: translate(0px, -4px);
+  }
+  .fade-left {
+    @apply opacity-0;
+    transform: translate(4rem, 0px);
+  }
+  .fade-right {
+    @apply opacity-0;
+    transform: translate(-4rem, 0px);
+  }
+
+  .animate {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+
+  .bg-carta p {
+    @apply font-bold mb-4 text-2xl;
+  }
+
+  @media screen and (min-width: 1200px) {
+    section {
+      /* @apply h-[calc(100vh - 108px)]; */
+      min-height: calc(100vh - 108px);
+    }
+  }
+
+  section {
+    /* @apply h-[calc(100vh - 108px)]; */
+  }
+
+  nav {
+    @apply fixed top-0 left-0 w-full z-20;
+  }
+
+  main {
+    @apply pt-[108px];
+  }
+
+  .bg-papel-2 {
+    @apply md:p-28 py-10;
+    background-image: url(../src/assets/img/bg-carta-3.png);
+    background-size: 100% 100%;
+  }
+  .bg-papel-2 p {
+    @apply font-extrabold text-2xl mb-4;
+  }
+
+  .bg-ficha {
+    @apply md:px-24 md:py-28 md:pt-14 p-10 py-24;
+    background-image: url(../src/assets/img/envelope-branco.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    p {
+        @apply font-bold text-2xl mb-2;
+    }
+  }
+
+  .container-equipe div {
+    @apply transition-all duration-300 shadow hover:shadow-2xl hover:scale-105;
+  }
+
+  .bg-lapis {
+    @apply md:p-20 text-blue-950;
+    position: relative;
+    background-image: url(../src/assets/img/lapis-branco.png);
+    background-size: contain;
+    /* background-position: 10px 20px, 120px 50px, 200px 150px; */
+
+    &::before {
+      content:  "";
+      position: absolute;
+      left: 40px;
+      top: 10px;
+      width: 95%;
+      height: 100%;
+      background-image: url(../src/assets/img/lapis-branco.png);
+      background-size: contain;
+    }
+
+    /* .mascara {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0, 0, .5);
+      height: 100%;
+      width: 100%;
+    } */
+  }
+
+  .navbar-bg {
+    @apply bg-blue-800;
+  }
